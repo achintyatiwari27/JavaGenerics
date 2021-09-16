@@ -5,20 +5,21 @@ import org.junit.Test;
 
 public class MaxTest {
     @Test
-    public void StringMax1() {
-        String  actualValue = Maximum.getmaximum("a","b","c");
-        Assert.assertEquals("c",actualValue);
+    public void intMax() {
+        int actualValue = Maximum.testMaximum(77,55,60);
+        Assert.assertEquals(77, actualValue);
     }
 
     @Test
-    public void StringMax2() {
-        String  actualValue = Maximum.getmaximum("USA","INDIA","ROME");
-        Assert.assertEquals("INDIA",actualValue);
+    public void floatMax() {
+        float actualValue = Maximum.testMaximum(77f,55f,60f);
+        Assert.assertEquals(77,actualValue,0);
     }
+
     @Test
-    public void StringMax()  {
-        String  actualValue = Maximum.getmaximum("Table","Chair","Laptop");
-        Assert.assertEquals("Table",actualValue);
+    public void stringMax() {
+        String actualValue = Maximum.testMaximum("USA","INDIA","ROME");
+        Assert.assertEquals("INDIA",actualValue);
     }
 }
 
